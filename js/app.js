@@ -109,6 +109,9 @@ function update_fields_by_colorpicker() {
 			set_inputs([Math.round(lab.l), Math.round(lab.a), Math.round(lab.b), '']);
 			break;
 	}
+	is_valid_input();
+	set_hints();
+	hide_hints();
 }
 
 function on_input() {
@@ -513,7 +516,7 @@ function xyz_to_rgb(xyz) {
 	} else {
 		rounding_data = false;
 	}
-	
+
 	return { r: r, g: g, b: b };
 }
 
